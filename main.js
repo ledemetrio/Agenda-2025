@@ -52,3 +52,10 @@ function atualizaCronometro(){
         document.getElementyById("min"+i). textContent = calculaTempo(tempos[i])[2];
     }
 }
+
+function comecaCronometro() {
+    atualizaCronometro();
+    setInterval(atualizaCronometro, 1000);
+}
+
+comecaCronometro();
